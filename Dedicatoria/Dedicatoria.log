@@ -1,0 +1,104 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.8.9)  1 DEC 2021 16:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Dedicatoria.tex
+(./Dedicatoria.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+
+! LaTeX Error: Environment quote undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \begin{quote}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 	\textit{A la razita que siempre}
+                                     
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (27.43329pt too wide) in paragraph at lines 5--6
+[]\OT1/cmr/m/it/10 A
+ []
+
+
+Overfull \hbox (7.66663pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/it/10 la
+ []
+
+
+Overfull \hbox (24.40538pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/it/10 razita
+ []
+
+
+Overfull \hbox (14.56656pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/it/10 que
+ []
+
+
+Overfull \hbox (23.51096pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/it/10 siem-
+ []
+
+
+Overfull \hbox (14.16794pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/it/10 pre 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 	\textit{me apoyó}
+                       
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{quote}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \end{quote}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> Dedicatoria.tex
+                   
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 21 strings out of 481239
+ 446 string characters out of 5920378
+ 236564 words of memory out of 5000000
+ 15388 multiletter control sequences out of 15000+600000
+ 532684 words of font info for 25 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 13i,1n,15p,67b,66s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

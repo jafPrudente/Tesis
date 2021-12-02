@@ -1,0 +1,183 @@
+%------------------------------------------------------------
+%	PREÁMBULO
+%------------------------------------------------------------
+
+\documentclass[A4, 11pt]{book} 
+
+\usepackage{graphics,graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[title]{appendix}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{braket}
+\usepackage{caption}
+\usepackage{afterpage}
+\usepackage{titling} 
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{selinput}
+\usepackage{booktabs} 
+\usepackage{lettrine}
+\usepackage{color}
+\usepackage{cancel}
+
+\usepackage{amsfonts} 
+\usepackage[centertags]{amsmath}
+\usepackage{stmaryrd,amssymb,amsthm}
+\usepackage{wasysym,mathrsfs}
+
+\usepackage[font=footnotesize,labelfont=small]{caption}
+\captionsetup{width=0.85\linewidth}
+
+\RequirePackage{geometry}
+\geometry{margin=1.9cm}
+
+\usepackage{parskip}
+\setlength{\parskip}{0.2cm}
+\setlength{\parindent}{0pt}
+
+\usepackage[square,numbers,sort]{natbib}
+\bibliographystyle{unsrt}
+
+\usepackage{imakeidx}
+\makeindex[columns=3, title=Índice Analítico, intoc]
+
+\selectlanguage{spanish}
+
+
+%------------------------------------------------------------
+%	FORMATO DE PÁGINAS
+%------------------------------------------------------------
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+
+\fancyhead[RO]{\leftmark \hspace{20pt} \thepage}
+\fancyhead[LE]{\thepage \hspace{20pt} \rightmark}
+
+
+%------------------------------------------------------------
+%	DEFINICIONES
+%------------------------------------------------------------
+
+
+%------------------------------------------------------------
+%	CARÁTULA
+%------------------------------------------------------------
+
+\title{Tesis}
+
+\author{\textsc{Jaf Prudente}}
+
+\date{}
+
+\begin{document}
+
+\raggedbottom
+
+\input{./Portada/Portada.tex}
+\thispagestyle{empty}
+
+\newpage
+\thispagestyle{empty}
+\cleardoublepage
+
+
+%------------------------------------------------------------
+%	DEDICATORIA
+%------------------------------------------------------------
+
+\input{./Dedicatoria/Dedicatoria.tex}
+\addtocontents{toc}{\hfill \textbf{Página} \par}
+
+
+%------------------------------------------------------------
+%	AGRADECIMIENTOS
+%------------------------------------------------------------
+
+\input{./Agradecimientos/Agradecimientos.tex}
+\markboth{Agradecimientos}{Agradecimientos}
+\addcontentsline{toc}{chapter}{Agradecimientos} 
+\pagenumbering{roman}
+
+
+%------------------------------------------------------------
+%	ÍNDICE
+%------------------------------------------------------------
+
+\tableofcontents
+\markboth{Índice general}{Índice general}
+\pagenumbering{arabic}
+
+
+%------------------------------------------------------------
+%	CAPÍTULO I
+%------------------------------------------------------------
+
+\input{./Cap1/cap1.tex}
+
+
+%------------------------------------------------------------
+%	CAPÍTULO II
+%------------------------------------------------------------
+
+\input{./Cap2/cap2.tex}
+
+
+%------------------------------------------------------------
+%	CAPÍTULO III
+%------------------------------------------------------------
+
+\input{./Cap3/cap3.tex}
+
+
+%------------------------------------------------------------
+%	CAPÍTULO IV
+%------------------------------------------------------------
+
+\input{./Cap4/cap4.tex}
+
+
+%------------------------------------------------------------
+%	CAPÍTULO V
+%------------------------------------------------------------
+
+\input{./Cap5/cap5.tex}
+
+
+%------------------------------------------------------------
+%	APÉNDICES
+%------------------------------------------------------------
+	
+\appendix
+
+\input{./Ap1/Ap1.tex}
+
+
+%------------------------------------------------------------
+%	BIBLIOGRAFÍA
+%------------------------------------------------------------
+
+\bibliography{./Bibliografia.bib}
+\addcontentsline{toc}{chapter}{Bibliografía}
+
+
+%------------------------------------------------------------
+%	ÍNDICE ANALÍTICO
+%------------------------------------------------------------
+
+\printindex
+\label{IndiceAnalitico}
+
+
+\end{document}
