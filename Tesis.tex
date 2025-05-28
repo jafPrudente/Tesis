@@ -1,51 +1,57 @@
 %------------------------------------------------------------
 %	PREÁMBULO
 %------------------------------------------------------------
+\documentclass{book}
 
-\documentclass[A4, 11pt]{book} 
-
-\usepackage{graphics,graphicx}
+\usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{multirow}
-\usepackage{fancyhdr}
 \usepackage{enumerate}
-\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage[spanish, es-nodecimaldot, es-tabla]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[title]{appendix}
 \usepackage{url}
-\usepackage[hidelinks]{hyperref}
 \usepackage{braket}
-\usepackage{caption}
 \usepackage{afterpage}
 \usepackage{titling} 
 \usepackage{float}
 \usepackage{lscape}
 \usepackage{selinput}
-\usepackage{booktabs} 
+\usepackage{booktabs}
 \usepackage{lettrine}
 \usepackage{color}
 \usepackage{cancel}
+\usepackage{comment}
+\usepackage{array}
+\usepackage{lipsum}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{16pt}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 
 \usepackage{amsfonts} 
 \usepackage[centertags]{amsmath}
-\usepackage{stmaryrd,amssymb,amsthm}
-\usepackage{wasysym,mathrsfs}
+\usepackage{stmaryrd, amssymb, amsthm}
+\usepackage{wasysym, mathrsfs}
+\usepackage{slashed}
 
-\usepackage[font=footnotesize,labelfont=small]{caption}
-\captionsetup{width=0.85\linewidth}
+\usepackage[font=scriptsize, labelfont=small]{caption}
+\captionsetup{width=1\linewidth}
+\usepackage{subcaption}
 
-\RequirePackage{geometry}
-\geometry{margin=1.9cm}
+\usepackage[a4paper, left=2cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
 
 \usepackage{parskip}
 \setlength{\parskip}{0.2cm}
 \setlength{\parindent}{0pt}
 
-\usepackage[square,numbers,sort]{natbib}
-\bibliographystyle{unsrt}
-
 \usepackage{imakeidx}
-\makeindex[columns=3, title=Índice Analítico, intoc]
+\usepackage[hidelinks, hyperindex=true]{hyperref}
+\makeindex[columns=2, title=Índice analítico, intoc]
 
 \selectlanguage{spanish}
 
@@ -53,7 +59,6 @@
 %------------------------------------------------------------
 %	FORMATO DE PÁGINAS
 %------------------------------------------------------------
-
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -69,12 +74,14 @@
 %------------------------------------------------------------
 %	DEFINICIONES
 %------------------------------------------------------------
+\renewcommand{\and}{\&}
+\addto\captionsspanish{\renewcommand{\bibname}{Referencias}}
+\def\path{Images/}
 
 
 %------------------------------------------------------------
 %	CARÁTULA
 %------------------------------------------------------------
-
 \title{Tesis}
 
 \author{\textsc{Jaf Prudente}}
@@ -96,7 +103,6 @@
 %------------------------------------------------------------
 %	DEDICATORIA
 %------------------------------------------------------------
-
 \input{./Dedicatoria/Dedicatoria.tex}
 \addtocontents{toc}{\hfill \textbf{Página} \par}
 
@@ -104,7 +110,6 @@
 %------------------------------------------------------------
 %	AGRADECIMIENTOS
 %------------------------------------------------------------
-
 \input{./Agradecimientos/Agradecimientos.tex}
 \markboth{Agradecimientos}{Agradecimientos}
 \addcontentsline{toc}{chapter}{Agradecimientos} 
@@ -114,7 +119,6 @@
 %------------------------------------------------------------
 %	ÍNDICE
 %------------------------------------------------------------
-
 \tableofcontents
 \markboth{Índice general}{Índice general}
 \pagenumbering{arabic}
@@ -123,61 +127,53 @@
 %------------------------------------------------------------
 %	CAPÍTULO I
 %------------------------------------------------------------
-
 \input{./Cap1/cap1.tex}
 
 
 %------------------------------------------------------------
 %	CAPÍTULO II
 %------------------------------------------------------------
-
 \input{./Cap2/cap2.tex}
 
 
 %------------------------------------------------------------
 %	CAPÍTULO III
 %------------------------------------------------------------
-
 \input{./Cap3/cap3.tex}
 
 
 %------------------------------------------------------------
 %	CAPÍTULO IV
 %------------------------------------------------------------
-
 \input{./Cap4/cap4.tex}
 
 
 %------------------------------------------------------------
 %	CAPÍTULO V
 %------------------------------------------------------------
-
 \input{./Cap5/cap5.tex}
 
 
 %------------------------------------------------------------
 %	APÉNDICES
 %------------------------------------------------------------
-	
 \appendix
 
 \input{./Ap1/Ap1.tex}
 
 
 %------------------------------------------------------------
-%	BIBLIOGRAFÍA
+%	REFERENCIAS
 %------------------------------------------------------------
-
-\bibliography{./Bibliografia.bib}
-\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{prudenteApa}
+\bibliography{./Referencias/Referencias.bib}{}
+\addcontentsline{toc}{chapter}{Referencias}
 
 
 %------------------------------------------------------------
 %	ÍNDICE ANALÍTICO
 %------------------------------------------------------------
-
 \printindex
-\label{IndiceAnalitico}
 
 
 \end{document}
